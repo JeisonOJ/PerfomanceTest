@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="992cd193-9ea5-474a-b724-825f4ed13335" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PerfomanceTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/CRUD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/ConfigDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/PurchaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ShopController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Purchase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ClientModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ProductModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/PurchaseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ShopModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerfomanceTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PerfomanceTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,8 +52,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Jeison/Documentos/Programacion/Java/mysql-connector-j-8.3.0.jar",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "/home/meta/Downloads/mysql-connector-j-8.3.0.jar",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
@@ -60,7 +75,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
       </set>
     </attachedChunks>
   </component>
