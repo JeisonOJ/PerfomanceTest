@@ -40,6 +40,6 @@ public class Shop {
 
     @Override
     public String toString() {
-        return "\nName: "+name+"\n Location: "+location;
+        return "\nId: "+id+"\n Name: "+name+"\n Location: "+location;
     }
 }

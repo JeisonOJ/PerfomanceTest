@@ -30,6 +30,9 @@ public class PurchaseController {
         JOptionPane.showMessageDialog(null, listAllPurchases());
     }
 
+    /**
+     * this method create a purchase
+     */
     public static void createPurchase() {
         try {
             Object[] clients = Utils.listToArray(ClientController.instanceModel().findAll());
@@ -71,6 +74,11 @@ public class PurchaseController {
 
     }
 
+    /**
+     * this method update the purchase
+     * first return the stock
+     * if failed, cancel the return the stock
+     */
     public static void updatePurchase() {
         try {
             Object[] purchases = Utils.listToArray(instanceModel().findAll());
@@ -87,8 +95,8 @@ public class PurchaseController {
                     JOptionPane.QUESTION_MESSAGE, null,
                     clients,
                     clients[0]);
-
             int oldStock = returnStockAndSaveOldStock(purchase);
+            System.out.println(oldStock);
             Object[] products = Utils.listToArray(ProductController.instanceModel().findAll());
             Product product = (Product) JOptionPane.showInputDialog(null,
                     "Select product",
@@ -120,10 +128,14 @@ public class PurchaseController {
             }
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Enter valid data");
+            JOptionPane.showMessageDialog(null, "Enter valid data"+e.getMessage());
         }
     }
 
+    /**
+     * This method delete a purchase
+     * if success return the stock
+     */
     public static void deletePurchase() {
         try {
             Object[] purchases = Utils.listToArray(instanceModel().findAll());
@@ -134,6 +146,7 @@ public class PurchaseController {
                     purchases,
                     purchases[0]);
             if (instanceModel().delete(purchase.getId())) {
+                returnStockAndSaveOldStock(purchase);
                 JOptionPane.showMessageDialog(null, "Delete successful");
             } else {
                 JOptionPane.showMessageDialog(null, "Delete failed");
@@ -157,6 +170,9 @@ public class PurchaseController {
         }
     }
 
+    /**
+     * list of purchases by product
+     */
     public static void findAllPurchasesByProduct() {
         try {
             Object[] products = Utils.listToArray(ProductController.instanceModel().findAll());
@@ -224,7 +240,7 @@ public class PurchaseController {
         int quantityToReturn = purchase.getQuantity();
         int stock = oldStock + quantityToReturn;
         purchase.getProduct().setStock(stock);
-        ProductController.instanceModel().update(purchase.getIdProduct());
+        ProductController.instanceModel().update(purchase.getProduct());
         return oldStock;
     }
 

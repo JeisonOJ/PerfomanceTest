@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="992cd193-9ea5-474a-b724-825f4ed13335" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/PurchaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/ShopController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ClientModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ProductModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/PurchaseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ShopModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerfomanceTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PerfomanceTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PurchaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PurchaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PurchaseModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -50,7 +50,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "\n Name: " + name + " " + lastName +
+        return "\nId: "+id+"\n Name: " + name + " " + lastName +
                 "\n Email: " + email;
     }
 }

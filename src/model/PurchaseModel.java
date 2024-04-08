@@ -97,14 +97,23 @@ public class PurchaseModel implements CRUD {
     public List<Object> findAll() {
         List<Object> purchases = new ArrayList<>();
         Connection connection = ConfigDB.openConnection();
-        String sql = "SELECT * FROM purchase";
+        String sql = "select * from purchase" +
+                " inner join products on purchase.id_products = products.id" +
+                " inner join clients on purchase.id_clients = clients.id;";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                purchases.add(new Purchase(rs.getInt("id"), rs.getString("created_at"),
-                        rs.getInt("quantity"), rs.getInt("id_clients"), rs.getInt("id_products")));
+                Client client = new Client(rs.getInt("id_clients"), rs.getString("name_client"),
+                        rs.getString("last_name"), rs.getString("email"));
+                Product product = new Product(rs.getInt("id_products"), rs.getString("name_product"),
+                        rs.getDouble("price"), rs.getInt("stock"), rs.getInt("id_shop"));
+                Purchase purchase = new Purchase(rs.getInt("id"), rs.getString("created_at"),
+                        rs.getInt("quantity"), rs.getInt("id_clients"), rs.getInt("id_products"));
+                purchase.setProduct(product);
+                purchase.setClient(client);
+                purchases.add(purchase);
             }
 
         } catch (SQLException e) {
@@ -119,15 +128,24 @@ public class PurchaseModel implements CRUD {
     public Object findById(int id) {
         Connection connection = ConfigDB.openConnection();
         Purchase purchase = null;
-        String sql = "SELECT * FROM purchase WHERE id = ?";
+        String sql = "SELECT * FROM purchase" +
+                " inner join products on purchase.id_products = products.id" +
+                " inner join clients on purchase.id_clients = clients.id" +
+                " WHERE purchase.id = ?";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
+                Client client = new Client(rs.getInt("id_clients"), rs.getString("name_client"),
+                        rs.getString("last_name"), rs.getString("email"));
+                Product product = new Product(rs.getInt("id_products"), rs.getString("name_product"),
+                        rs.getDouble("price"), rs.getInt("stock"), rs.getInt("id_shop"));
                 purchase = new Purchase(rs.getInt("id"), rs.getString("created_at"),
                         rs.getInt("quantity"), rs.getInt("id_clients"), rs.getInt("id_products"));
+                purchase.setProduct(product);
+                purchase.setClient(client);
             }
 
         } catch (SQLException e) {
